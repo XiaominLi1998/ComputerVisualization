@@ -1,0 +1,275 @@
+canvas {
+  border: 1px solid black;
+  background: #eee;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+#pageTitle {
+  position: relative;
+  top: -20px;
+  /* left: 300px; */
+  text-align: center;
+  font-size: 25px;
+}
+
+#mycanvas {
+  background-color: #f2fcfd;
+  /* height: 520px;
+  width: 520px; */
+  position: relative;
+  top: -50px;
+  left: 10px;
+}
+
+#mycanvas2 {
+  position: relative;
+  top: -50px;
+  left: 20px;
+  background-color: blanchedalmond;
+  height: 300px;
+  width: 300px;
+}
+
+body {
+  margin: 0;
+}
+
+.shootStyleChoose {
+  /* margin-top: 5px; */
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+/*--------------------------------formula----------------------------------*/
+
+#formula {
+  /* margin-top: 5px; */
+  margin-left: 3px;
+  font-size: 20px;
+
+  /* display:inline-block; */
+
+  position: relative;
+  margin-top: -20px;
+  left: 350px;
+}
+
+/*--------------------------------input forms buttons----------------------------------*/
+
+#allInputs {
+  /* margin-top: 5px; */
+  margin-left: 3px;
+  font-size: 25px;
+
+  /* display:inline-block; */
+
+  position: relative;
+  margin-top: -180px;
+  left: 10px;
+}
+
+#divTheta {
+  position: relative;
+  margin-top: -130px;
+  left: 0px;
+}
+
+#divEpsilon {
+  position: relative;
+  margin-top: -20px;
+  left: 0px;
+}
+#divSpeed {
+  position: relative;
+  margin-top: -23px;
+  left: 0px;
+}
+
+#divSlider1 {
+  position: relative;
+  margin-top: -10px;
+  left: 0px;
+}
+
+#divSlider2 {
+  position: relative;
+  margin-top: -10px;
+  left: 0px;
+}
+
+#divSlider3 {
+  position: relative;
+  margin-top: -10px;
+  left: 0px;
+}
+
+.labels {
+  font-size: 14px;
+}
+
+.inputs
+{
+    font-size:15px;
+}
+
+/* #input1{
+  margin-left: 35px
+} */
+
+#radiobtns {
+  /*margin-left: 3px;
+  font-size: 25px;*/
+
+  position: relative;
+  margin-top: 10px;
+  left: 10px;
+}
+
+
+
+#btn1 {
+  background-color: #008cba;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 4px;
+  cursor: pointer;
+
+  position: relative;
+  top: 0px;
+  left: 5px;
+}
+
+#length{
+  margin-left: 460px;
+  margin-top: -40px;
+  font-size: 30px;
+  color: red ;
+}
+
+#stopLookAt {
+  /*margin-left: 3px;
+  font-size: 25px;*/
+
+  position: absolute;
+  margin-top: -5px;
+  left: 750px;
+  -webkit-transform: scale(1.4);
+}
+
+
+#rotateSlider1{
+  position: relative;
+  margin-top: 40px;
+  margin-left: 725px;
+  -webkit-appearance: slider-horizontal;
+  height: 10px;
+  width: 360px;
+}
+
+#rotateSlider2{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 240px;
+  -webkit-appearance: slider-vertical;
+  width: 340px;
+  height:360px
+}
+
+
+
+/*--------------------------------radio buttons----------------------------------*/
+
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* display: inline-block; */
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+}
+.form-radio:checked::before {
+  position: absolute;
+  font: 13px/1 "Open Sans", sans-serif;
+  left: 11px;
+  top: 7px;
+  content: "\02143";
+  transform: rotate(40deg);
+}
+.form-radio:hover {
+  background-color: #f7f7f7;
+}
+.form-radio:checked {
+  background-color: #f1f1f1;
+}
+label {
+  font: 15px/1.7 "Open Sans", sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+
+/*--------------------------------slider----------------------------------*/
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 250px; /* Full-width */
+  height: 5px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+
+  display: inline-block;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* .slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+*/
+
+
+
+
+

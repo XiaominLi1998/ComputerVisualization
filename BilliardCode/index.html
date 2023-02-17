@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="timeline" />
+  <meta charset="utf-8" />
+  <title>Billiards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onLoad="init();">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>     -->
+  <script src="finalBilliard.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+
+  <div id="pageTitle">
+    <h3>Choose Mode to Shoot Billiard Ball<h3>
+  </div>
+
+
+
+  <!-- --------------------------------user inputs:---------------------------------- -->
+  <p id="formula">
+    \begin{multline}
+    \text{Main Theorem: Define the length of the trajectory as $l(\theta, \epsilon)$. For some power $r \in
+    \mathbb{N}$,}\\
+    \end{multline}
+
+    \begin{multline}
+    \lim_{\epsilon\rightarrow 0} \epsilon^r \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} (l(\theta, \epsilon))^r d\theta =
+    \text{some }C_r > 0
+    \end{multline}
+  </p>
+
+
+  <!-- --------------------------------user inputs:---------------------------------- -->
+
+  <form id="allInputs">
+    <!-- ------1: theta---------- -->
+    <div id="divTheta">
+      <label class="labels" id="input1" for="theta" size=><span> Angle &theta; :</span></label>
+      <input class="inputs" id="thetaInput" name="theta" class="input-field" type="number" step="0.01" size="10"
+        value="0.3926990816" />
+    </div>
+    <div id="divSlider1">
+      <input id="slider1" type="range" min="1" max="100" value="50" class="slider">
+    </div>
+
+    <!-- ------2: epsilon---------- -->
+    <p></p>
+    <div id="divEpsilon">
+      <label class="labels" for="epsilon">Pocket size &epsilon; = </label>
+      <input class="inputs" id="epsilonInput" type="number" step="0.01" value=0.1 name="epsilon" size="10" />
+    </div>
+    <div id="divSlider2">
+      <input id="slider2" type="range" min="1" max="50" value="25" class="slider">
+    </div>
+    <!-- ------3: speed---------- -->
+    <p></p>
+    <div id="divSpeed">
+      <label class="labels" for="speed">Speed = </label>
+      <input class="inputs" id="speedInput" type="number" step="1" value=2 name="speed" size="10" />
+    </div>
+    <div id="divSlider3">
+      <input id="slider3" type="range" min="1" max="10" value="2" class="slider">
+    </div>
+
+  </form>
+
+  <!-- --------------------------------Radio Buttion + Buttion---------------------------------- -->
+
+  <form id="radiobtns">
+    <input type="radio" name="shootStyle" value="one" id="radio-one" class="form-radio" value="typeinShoot"
+      onchange="modeChosen()"><label for="radio-one"> Input &theta; to Shoot</label>
+    <input type="radio" name="shootStyle" value="one" id="radio-one" class="form-radio" value="mouseShoot"
+      onchange="modeChosen()"><label for="radio-one"> Use Mouse to Shoot</label>
+    <button type="button" onclick="shootByInput();" id="btn1">Shoot</button>
+  </form>
+
+
+  <!-- --------------------------------length---------------------------------- -->
+
+  <p id="length">
+  </p>
+
+
+
+  <!-- --------------------------------Stop Look at and Rotate---------------------------------- -->
+
+
+
+
+  <form id="stopLookAt">
+    <input type="checkbox" id="checkStop" value="stopLookAt" onchange="stopLookAt()"> <label for="radio-one">Use Sliders
+      to Rotate </label>
+  </form>
+
+  <input id="rotateSlider1" class="input-range" type="range" step="0.1" value="5" min="1" max="10">
+  <canvas id="mycanvas"></canvas>
+  <canvas id="mycanvas2"></canvas>
+  <input id="rotateSlider2" class="input-range" type="range" step="0.1" value="5" min="1" max="10">
+
+</body>
+
+</html>
